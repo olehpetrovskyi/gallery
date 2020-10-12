@@ -1,0 +1,15 @@
+@import "layout-variables";
+
+.shell {
+  height: 100%;
+
+  .header-container {
+    height: $header-height;
+  }
+
+  .content-container {
+    overflow: auto;
+    height: calc(100% - #{$header-height});
+    padding: $md-offset;
+  }
+}

@@ -1,0 +1,14 @@
+@import "layout-variables";
+
+.photo {
+  text-align: center;
+
+  .photo-container {
+    max-width: 700px;
+    margin: 0 auto $md-offset auto;
+
+    .photo-image {
+      width: 100%;
+    }
+  }
+}

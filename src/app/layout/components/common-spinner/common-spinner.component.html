@@ -1,0 +1,15 @@
+<div class="spinner-container" [ngClass]="{'full-size': !config.containerHeight}"
+     [style.height.px]="config.containerHeight"
+     [style.width.px]="config.containerWidth"
+>
+  <div class="spinner-inner">
+    <div class="spinner-wrapper">
+      <div class="common-spinner" [style.width.px]="config.diameter">
+        <mat-spinner color="primary"
+                     [diameter]="config.diameter"
+        ></mat-spinner>
+      </div>
+      <p *ngIf="config.showProcessingMessage" class="processing-message">Processing...</p>
+    </div>
+  </div>
+</div>

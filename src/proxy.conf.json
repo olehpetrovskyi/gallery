@@ -1,0 +1,13 @@
+{
+  "/images": {
+    "target":  {
+      "host": "placeimg.com",
+      "protocol": "https:",
+      "port": 443
+    },
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info",
+    "pathRewrite": {"^/images" : ""}
+  }
+}

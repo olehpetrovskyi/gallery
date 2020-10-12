@@ -1,0 +1,53 @@
+@import "layout-variables";
+
+.photo-thumbnail {
+  width: 100%;
+
+  .photo-thumbnail-image-wrapper {
+    position: relative;
+    padding-top: 100%;
+
+    .photo-thumbnail-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: block;
+      background-color: #cccccc;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .photo-thumbnail-link {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .favorite-icon {
+      position: absolute;
+      display: block;
+      bottom: $sm-offset;
+      right: $sm-offset;
+      color: #ffffff;
+      line-height: 0;
+    }
+
+    .preloader-container {
+      $spinner-d: 35px;
+
+      position: absolute;
+      width: $spinner-d;
+      height: $spinner-d;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
