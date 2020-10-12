@@ -1,0 +1,18 @@
+<div class="gallery">
+  <div class="photo-thumbnails-list"
+       infiniteScroll
+       [infiniteScrollDistance]="2"
+       [infiniteScrollContainer]="'.content-container'"
+       [scrollWindow]="false"
+       (scrolled)="getPhotos()"
+       [fromRoot]="true"
+  >
+    <div class="photo-thumbnail-wrapper" *ngFor="let photo of photos.data">
+      <gl-photo-thumbnail [photo]="photo" [linkMode]="favoritesMode"></gl-photo-thumbnail>
+    </div>
+  </div>
+  <gl-common-spinner [config]="spinnerConfig" *ngIf="loadInProgress"></gl-common-spinner>
+  <p *ngIf="favoritesMode && !photos.getQuantity() && !loadInProgress" class="no-favorites-message">
+    <span>No Photos had been added to favorites yet!</span>
+  </p>
+</div>

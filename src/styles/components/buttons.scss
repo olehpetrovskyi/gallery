@@ -1,0 +1,9 @@
+@import "layout-variables";
+
+@media screen and (max-width: $break-sm) {
+  .gl-button {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+  }
+}

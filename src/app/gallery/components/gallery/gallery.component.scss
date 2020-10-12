@@ -1,0 +1,20 @@
+@import "layout-variables";
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  .photo-thumbnails-list {
+    overflow: hidden;
+    margin: -$md-offset/2;
+
+    .photo-thumbnail-wrapper {
+      float: left;
+      width: 33.3%;
+      padding: $md-offset/2;
+    }
+  }
+
+  .no-favorites-message {
+    text-align: center;
+    margin-top: $lg-offset;
+  }
+}

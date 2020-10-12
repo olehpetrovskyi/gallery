@@ -1,0 +1,19 @@
+<div class="photo-thumbnail" (click)="onClick()">
+  <div class="photo-thumbnail-image-wrapper">
+    <img #image
+         [src]="photo.dataUrl || photo.url"
+         class="photo-thumbnail-image"
+         alt="photo"
+         crossorigin="anonymous"
+    >
+    <span *ngIf="photo.isFavorite"
+          class="favorite-icon"
+    >
+      <span class="material-icons">favorite_border</span>
+    </span>
+    <a *ngIf="linkMode" [routerLink]="['/photos', photo.id]" class="photo-thumbnail-link"></a>
+    <div class="preloader-container">
+      <gl-common-spinner [config]="spinnerConfig" *ngIf="inProgress"></gl-common-spinner>
+    </div>
+  </div>
+</div>
